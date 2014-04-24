@@ -86,7 +86,7 @@
         <configuration>
           <server>github</server>
           <message>creating site for ${project.version}</message>
-          <path>site/${project.version}</path>
+          <path>sites/${project.version}</path>
           <merge>true</merge>
         </configuration>
         <executions>

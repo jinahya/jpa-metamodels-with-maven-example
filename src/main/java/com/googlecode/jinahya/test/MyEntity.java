@@ -18,19 +18,25 @@
 package com.googlecode.jinahya.test;
 
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 
 /**
- * 
+ *
  * @author <a href="mailto:onacit@gmail.com">Jin Kwon</a>
  */
 @Entity
-public class MyEntity {
+public class MyEntity implements Serializable {
+
+
+    private static final long serialVersionUID = 2386467385199396852L;
 
 
     @Id
     private Long id;
 
+
 }
+

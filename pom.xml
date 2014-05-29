@@ -53,7 +53,7 @@
     <maven.compiler.testSource>1.8</maven.compiler.testSource>
     <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
     <openjpa.version>2.3.0</openjpa.version>
-    <datanucleus.version>4.0.0-m2</datanucleus.version>
+    <datanucleus.version>4.0.0-m4</datanucleus.version>
     <eclipselink.version>2.5.2-M1</eclipselink.version>
     <hibernate.version>4.3.5.Final</hibernate.version>
   </properties>
@@ -181,7 +181,7 @@
     <tag>HEAD</tag>
   </scm>
   <prerequisites>
-    <maven>3.0.5</maven>
+    <maven>3.2.1</maven>
   </prerequisites>
   <profiles>
     <profile>

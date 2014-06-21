@@ -22,6 +22,11 @@
         <version>${openjpa.version}</version>
       </dependency>
       <dependency>
+        <groupId>org.batoo.jpa</groupId>
+        <artifactId>batoo-jpa</artifactId>
+        <version>${batoojpa.version}</version>
+      </dependency>
+      <dependency>
         <groupId>org.datanucleus</groupId>
         <artifactId>datanucleus-jpa-query</artifactId>
         <version>${datanucleus.version}</version>
@@ -29,6 +34,11 @@
       <dependency>
         <groupId>org.eclipse.persistence</groupId>
         <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+        <version>${eclipselink.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.eclipse.persistence</groupId>
+        <artifactId>eclipselink</artifactId>
         <version>${eclipselink.version}</version>
       </dependency>
       <dependency>
@@ -53,9 +63,12 @@
     <maven.compiler.testSource>1.8</maven.compiler.testSource>
     <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
     <openjpa.version>2.3.0</openjpa.version>
-    <datanucleus.version>4.0.0-m4</datanucleus.version>
-    <eclipselink.version>2.5.2-M1</eclipselink.version>
+    <datanucleus.version>4.0.0-release</datanucleus.version>
+    <!--eclipselink.version>2.5.2-M1</eclipselink.version-->
+    <!--eclipselink.version>2.5.2-RC1</eclipselink.version-->
+    <eclipselink.version>2.5.1</eclipselink.version>
     <hibernate.version>4.3.5.Final</hibernate.version>
+    <batoojpa.version>2.0.1.2</batoojpa.version>
   </properties>
 
   <!-- Build Settings -->
@@ -92,9 +105,9 @@
         <executions>
           <execution>
             <goals>
-	      <!--
-                  <goal>site</goal>
-	      -->
+              <!--
+                        <goal>site</goal>
+              -->
             </goals>
             <phase>site</phase>
           </execution>
@@ -175,9 +188,9 @@
 
   <!-- Environment Settings -->
   <scm>
-    <connection>scm:git:git@github.com:jinahya/jpa-metamodels-with-maven.git</connection>
-    <developerConnection>scm:git:git@github.com:jinahya/jpa-metamodels-with-maven.git</developerConnection>
-    <url>https://github.com/jinahya/jpa-metamodels-with-maven</url>
+    <connection>scm:git:git@github.com:jinahya/${project.artifactId}.git</connection>
+    <developerConnection>scm:git:git@github.com:jinahya/${project.artifactId}.git</developerConnection>
+    <url>https://github.com/jinahya/${project.artifactId}</url>
     <tag>HEAD</tag>
   </scm>
   <prerequisites>
@@ -185,7 +198,7 @@
   </prerequisites>
   <profiles>
     <profile>
-      <id>hibernate1</id>
+      <id>hibernate-as-dependency</id>
       <dependencies>
         <dependency>
           <groupId>org.hibernate</groupId>
@@ -196,7 +209,7 @@
       </dependencies>
     </profile>
     <profile>
-      <id>hibernate2</id>
+      <id>hibernate-by-processor</id>
       <build>
         <plugins>
           <plugin>
@@ -228,7 +241,7 @@
       </build>
     </profile>
     <profile>
-      <id>openjpa1</id>
+      <id>openjpa-as-dependency</id>
       <dependencies>
         <dependency>
           <groupId>org.apache.openjpa</groupId>
@@ -253,7 +266,7 @@
       </build>
     </profile>
     <profile>
-      <id>openjpa2</id>
+      <id>openjpa-by-processor</id>
       <build>
         <plugins>
           <plugin>
@@ -288,8 +301,16 @@
       </build>
     </profile>
     <profile>
-      <id>eclipselink1</id>
+      <id>eclipselink-as-dependency</id>
       <dependencies>
+        <!--
+        <dependency>
+          <groupId>org.eclipse.persistence</groupId>
+          <artifactId>eclipselink</artifactId>
+          <scope>compile</scope>
+          <optional>true</optional>
+        </dependency>
+        -->
         <dependency>
           <groupId>org.eclipse.persistence</groupId>
           <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
@@ -303,16 +324,18 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
             <configuration>
+              <!--
               <compilerArgs>
                 <arg>-Aeclipselink.persistencexml=src/main/resources/META-INF/persistence.xml</arg>
               </compilerArgs>
+              -->
             </configuration>
           </plugin>
         </plugins>
       </build>
     </profile>
     <profile>
-      <id>eclipselink2</id>
+      <id>eclipselink-by-processor</id>
       <build>
         <plugins>
           <plugin>
@@ -345,7 +368,7 @@
       </build>
     </profile>
     <profile>
-      <id>datanucleus1</id>
+      <id>datanucleus-as-dependency</id>
       <dependencies>
         <dependency>
           <groupId>org.datanucleus</groupId>
@@ -363,7 +386,57 @@
       </dependencies>
     </profile>
     <profile>
-      <id>datanucleus2</id>
+      <id>datanucleus-by-processor</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.bsc.maven</groupId>
+            <artifactId>maven-processor-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>process</id>
+                <goals>
+                  <goal>process</goal>
+                </goals>
+                <phase>generate-sources</phase>
+                <configuration>
+                  <processors>
+                    <processor>org.datanucleus.jpa.query.JPACriteriaProcessor</processor>
+                  </processors>
+                </configuration>
+              </execution>
+            </executions>
+            <dependencies>
+              <dependency>
+                <groupId>org.datanucleus</groupId>
+                <artifactId>datanucleus-jpa-query</artifactId>
+                <version>${datanucleus.version}</version>
+              </dependency>
+              <dependency>
+                <groupId>org.datanucleus</groupId>
+                <artifactId>datanucleus-core</artifactId>
+                <version>${datanucleus.version}</version>
+              </dependency>
+            </dependencies>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <!-- not work -->
+      <id>batoojpa1</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.batoo.jpa</groupId>
+          <artifactId>batoo-jpa</artifactId>
+          <scope>compile</scope>
+          <optional>true</optional>
+        </dependency>
+      </dependencies>
+    </profile>
+    <profile>
+      <!-- not work -->
+      <id>batoojpa2</id>
       <build>
         <plugins>
           <plugin>

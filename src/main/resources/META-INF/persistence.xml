@@ -5,6 +5,8 @@
   <persistence-unit name="testPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <properties/>
+    <!--
     <class>com.googlecode.jinahya.test.MyEntity</class>
+    -->
   </persistence-unit>
 </persistence>

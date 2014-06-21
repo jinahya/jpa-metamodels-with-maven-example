@@ -226,6 +226,9 @@
   <profiles>
     <profile>
       <id>hibernate-as-dependency</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <dependencies>
         <dependency>
           <groupId>org.hibernate</groupId>

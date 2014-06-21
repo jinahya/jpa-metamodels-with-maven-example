@@ -15,7 +15,7 @@
  */
 
 
-package com.googlecode.jinahya.test;
+package com.github.jinahya.test;
 
 
 import java.io.Serializable;

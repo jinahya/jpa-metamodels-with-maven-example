@@ -1,11 +1,11 @@
 #!/bin/sh
-mvn -Phibernate-as-dependency clean package
-mvn -Phibernate-by-processor clean package
-mvn -Popenjpa-as-dependency clean package
-mvn -Popenjpa-by-processor clean package
-mvn -Peclipselink-as-dependency clean package
-mvn -Peclipselink-by-processor clean package
-mvn -Pdatanucleus-as-dependency clean package
-mvn -Pdatanucleus-by-processor clean package
+mvn -Phibernate-dependency clean package
+mvn -Phibernate-processor clean package
+mvn -Popenjpa-dependency clean package
+mvn -Popenjpa-processor clean package
+mvn -Peclipselink-dependency clean package
+mvn -Peclipselink-processor clean package
+mvn -Pdatanucleus-dependency clean package
+mvn -Pdatanucleus-processor clean package
 #mvn -Pbatoojpa1 (Active: false , Source: pom)
 #mvn -Pbatoojpa2 (Active: false , Source: pom)

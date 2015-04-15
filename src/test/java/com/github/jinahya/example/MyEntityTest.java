@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 onacit.
+ * Copyright 2015 Jin Kwon &lt;jinahya_at_gmail.com&gt;.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,28 +15,14 @@
  */
 
 
-package com.github.jinahya.test;
-
-
-import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+package com.github.jinahya.example;
 
 
 /**
  *
- * @author <a href="mailto:onacit@gmail.com">Jin Kwon</a>
+ * @author Jin Kwon &lt;jinahya_at_gmail.com&gt;
  */
-@Entity
-public class MyEntity implements Serializable {
-
-
-    private static final long serialVersionUID = 2386467385199396852L;
-
-
-    @Id
-    private Long id;
-
+public class MyEntityTest {
 
 }
 

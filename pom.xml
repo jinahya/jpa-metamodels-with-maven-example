@@ -66,11 +66,11 @@
     <!--eclipselink.version>2.5.2-M1</eclipselink.version-->
     <!--eclipselink.version>2.5.2-RC1</eclipselink.version-->
     <!--eclipselink.version>2.5.1</eclipselink.version-->
-    <eclipselink.version>2.6.0</eclipselink.version>
+    <eclipselink.version>2.6.1-RC1</eclipselink.version>
     <!--hibernate.version>4.3.5.Final</hibernate.version-->
     <!--<hibernate.version>4.3.6.Final</hibernate.version>-->
-    <hibernate.version>5.0.0.Beta1</hibernate.version>
-    <openjpa.version>2.3.0</openjpa.version>
+    <hibernate.version>5.0.0.Final</hibernate.version>
+    <openjpa.version>2.4.0</openjpa.version>
   </properties>
 
   <!-- Build Settings -->

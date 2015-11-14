@@ -61,9 +61,9 @@
     <maven.compiler.testSource>1.8</maven.compiler.testSource>
     <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
     <batoojpa.version>2.0.1.2</batoojpa.version>
-    <datanucleus.version>4.0.4</datanucleus.version>
+    <datanucleus.version>4.0.5</datanucleus.version>
     <eclipselink.version>2.6.1</eclipselink.version>
-    <hibernate.version>5.0.2.Final</hibernate.version>
+    <hibernate.version>5.0.3.Final</hibernate.version>
     <openjpa.version>2.4.0</openjpa.version>
   </properties>
 
@@ -168,7 +168,9 @@
     <url>https://github.com/jinahya/${project.artifactId}</url>
     <tag>HEAD</tag>
   </scm>
-  <prerequisites />
+  <prerequisites>
+    <maven>3.1</maven>
+  </prerequisites>
   <profiles>
     <profile>
       <id>hibernate-dependency</id>

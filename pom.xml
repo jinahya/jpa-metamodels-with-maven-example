@@ -5,7 +5,7 @@
   <!-- The Basics -->
   <groupId>com.github.jinahya</groupId>
   <artifactId>jpa-metamodels-with-maven-example</artifactId>
-  <version>0.5-SNAPSHOT</version>
+  <version>0.5.0</version>
   <packaging>jar</packaging>
   <dependencyManagement>
     <dependencies>
@@ -162,7 +162,7 @@
     <connection>scm:git:git@github.com:jinahya/${project.artifactId}.git</connection>
     <developerConnection>scm:git:git@github.com:jinahya/${project.artifactId}.git</developerConnection>
     <url>https://github.com/jinahya/${project.artifactId}</url>
-    <tag>HEAD</tag>
+    <tag>0.5.0</tag>
   </scm>
   <prerequisites>
     <maven>3.1</maven>

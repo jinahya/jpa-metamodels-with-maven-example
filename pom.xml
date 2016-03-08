@@ -10,11 +10,6 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>javax</groupId>
-        <artifactId>javaee-api</artifactId>
-        <version>7.0</version>
-      </dependency>
-      <dependency>
         <groupId>org.apache.openjpa</groupId>
         <artifactId>openjpa</artifactId>
         <version>${openjpa.version}</version>
@@ -50,6 +45,7 @@
     <dependency>
       <groupId>javax</groupId>
       <artifactId>javaee-api</artifactId>
+      <version>7.0</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
@@ -61,10 +57,10 @@
     <maven.compiler.testSource>1.8</maven.compiler.testSource>
     <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
     <batoojpa.version>2.0.1.2</batoojpa.version>
-    <datanucleus.version>4.0.5</datanucleus.version>
-    <eclipselink.version>2.6.1</eclipselink.version>
-    <hibernate.version>5.0.3.Final</hibernate.version>
-    <openjpa.version>2.4.0</openjpa.version>
+    <datanucleus.version>5.0.0-m1</datanucleus.version>
+    <eclipselink.version>2.6.3-M1</eclipselink.version>
+    <hibernate.version>5.1.0.Final</hibernate.version>
+    <openjpa.version>2.4.1</openjpa.version>
   </properties>
 
   <!-- Build Settings -->

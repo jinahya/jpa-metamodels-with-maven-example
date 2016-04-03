@@ -1,12 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
   <modelVersion>4.0.0</modelVersion>
 
-  <!-- The Basics -->
+  <parent>
+    <groupId>com.github.jinahya</groupId>
+    <artifactId>jinahya-parent</artifactId>
+    <version>0.7.3</version>
+  </parent>
+
   <groupId>com.github.jinahya</groupId>
   <artifactId>jpa-metamodels-with-maven-example</artifactId>
   <version>0.5.1-SNAPSHOT</version>
   <packaging>jar</packaging>
+
+  <name>${project.artifactId}</name>
+  <url>http://jinahya.github.io/${project.artifactId}/sites/${project.version}</url>
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>A business-friendly OSS license</comments>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:git@github.com:jinahya/${project.artifactId}.git</connection>
+    <developerConnection>scm:git:git@github.com:jinahya/${project.artifactId}.git</developerConnection>
+    <url>https://github.com/jinahya/${project.artifactId}</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
+    <maven.compiler.testSource>1.8</maven.compiler.testSource>
+    <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
+    <batoojpa.version>2.0.1.2</batoojpa.version>
+    <datanucleus.version>5.0.0-m1</datanucleus.version>
+    <eclipselink.version>2.6.3-M1</eclipselink.version>
+    <hibernate.version>5.1.0.Final</hibernate.version>
+    <openjpa.version>2.4.1</openjpa.version>
+  </properties>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -49,21 +87,7 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <maven.compiler.source>1.6</maven.compiler.source>
-    <maven.compiler.target>1.6</maven.compiler.target>
-    <maven.compiler.testSource>1.8</maven.compiler.testSource>
-    <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
-    <batoojpa.version>2.0.1.2</batoojpa.version>
-    <datanucleus.version>5.0.0-m1</datanucleus.version>
-    <eclipselink.version>2.6.3-M1</eclipselink.version>
-    <hibernate.version>5.1.0.Final</hibernate.version>
-    <openjpa.version>2.4.1</openjpa.version>
-  </properties>
 
-  <!-- Build Settings -->
   <build>
     <resources>
       <resource>
@@ -78,35 +102,16 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.3</version>
+          <version>3.5.1</version>
         </plugin>
         <plugin>
           <groupId>org.bsc.maven</groupId>
           <artifactId>maven-processor-plugin</artifactId>
-          <version>3.1.0-beta1</version>
+          <version>3.1.0</version>
         </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
-      <plugin>
-        <groupId>com.github.github</groupId>
-        <artifactId>site-maven-plugin</artifactId>
-        <version>0.12</version>
-        <configuration>
-          <server>github</server>
-          <message>creating site for ${project.version}</message>
-          <path>sites/${project.version}</path>
-          <merge>true</merge>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <!--<goal>site</goal>-->
-            </goals>
-            <phase>site</phase>
-          </execution>
-        </executions>
-      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
@@ -130,43 +135,9 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <version>2.5.2</version>
-        <configuration>
-          <tagNameFormat>@{project.version}</tagNameFormat>
-          <pushChanges>false</pushChanges>
-          <localCheckout>true</localCheckout>
-          <goals>install</goals>
-        </configuration>
-      </plugin>
     </plugins>
   </build>
-  <reporting />
 
-  <!-- More Project Information -->
-  <name>${project.artifactId}</name>
-  <url>http://jinahya.github.io/${project.artifactId}/sites/${project.version}</url>
-  <licenses>
-    <license>
-      <name>Apache License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-      <distribution>repo</distribution>
-      <comments>A business-friendly OSS license</comments>
-    </license>
-  </licenses>
-
-  <!-- Environment Settings -->
-  <scm>
-    <connection>scm:git:git@github.com:jinahya/${project.artifactId}.git</connection>
-    <developerConnection>scm:git:git@github.com:jinahya/${project.artifactId}.git</developerConnection>
-    <url>https://github.com/jinahya/${project.artifactId}</url>
-    <tag>HEAD</tag>
-  </scm>
-  <prerequisites>
-    <maven>3.1</maven>
-  </prerequisites>
   <profiles>
     <profile>
       <id>hibernate-dependency</id>

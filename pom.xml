@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.github.jinahya</groupId>
     <artifactId>jinahya-parent</artifactId>
-    <version>0.7.4</version>
+    <version>0.7.5</version>
   </parent>
 
   <groupId>com.github.jinahya</groupId>
@@ -44,9 +44,9 @@
     <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
     <batoojpa.version>2.0.1.2</batoojpa.version>
     <datanucleus.version>5.0.1</datanucleus.version>
-    <eclipselink.version>2.6.3</eclipselink.version>
-    <hibernate.version>5.2.2.Final</hibernate.version>
-    <openjpa.version>2.4.1</openjpa.version>
+    <eclipselink.version>2.6.4</eclipselink.version>
+    <hibernate.version>5.2.8.Final</hibernate.version>
+    <openjpa.version>2.4.2</openjpa.version>
   </properties>
 
   <dependencyManagement>
@@ -106,12 +106,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.5.1</version>
+          <version>3.6.1</version>
         </plugin>
         <plugin>
           <groupId>org.bsc.maven</groupId>
           <artifactId>maven-processor-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>3.2.0</version>
         </plugin>
       </plugins>
     </pluginManagement>

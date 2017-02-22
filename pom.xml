@@ -5,12 +5,12 @@
   <parent>
     <groupId>com.github.jinahya</groupId>
     <artifactId>jinahya-parent</artifactId>
-    <version>0.7.3</version>
+    <version>0.7.4</version>
   </parent>
 
   <groupId>com.github.jinahya</groupId>
   <artifactId>jpa-metamodels-with-maven-example</artifactId>
-  <version>0.5.2</version>
+  <version>0.5.3-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>${project.artifactId}</name>
@@ -24,11 +24,15 @@
     </license>
   </licenses>
 
+  <prerequisites>
+    <maven>3.1</maven>
+  </prerequisites>
+
   <scm>
     <connection>scm:git:git@github.com:jinahya/${project.artifactId}.git</connection>
     <developerConnection>scm:git:git@github.com:jinahya/${project.artifactId}.git</developerConnection>
     <url>https://github.com/jinahya/${project.artifactId}</url>
-    <tag>0.5.2</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
@@ -39,9 +43,9 @@
     <maven.compiler.testSource>1.8</maven.compiler.testSource>
     <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
     <batoojpa.version>2.0.1.2</batoojpa.version>
-    <datanucleus.version>5.0.0-release</datanucleus.version>
+    <datanucleus.version>5.0.1</datanucleus.version>
     <eclipselink.version>2.6.3</eclipselink.version>
-    <hibernate.version>5.2.1.Final</hibernate.version>
+    <hibernate.version>5.2.2.Final</hibernate.version>
     <openjpa.version>2.4.1</openjpa.version>
   </properties>
 

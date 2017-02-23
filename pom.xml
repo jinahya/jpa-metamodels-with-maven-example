@@ -42,11 +42,11 @@
     <maven.compiler.target>1.6</maven.compiler.target>
     <maven.compiler.testSource>1.8</maven.compiler.testSource>
     <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
-    <batoojpa.version>2.0.1.2</batoojpa.version>
-    <datanucleus.version>5.0.1</datanucleus.version>
-    <eclipselink.version>2.6.4</eclipselink.version>
-    <hibernate.version>5.2.8.Final</hibernate.version>
-    <openjpa.version>2.4.2</openjpa.version>
+    <version.batoojpa>2.0.1.2</version.batoojpa>
+    <version.datanucleus>5.0.1</version.datanucleus>
+    <version.eclipselink>2.6.4</version.eclipselink>
+    <version.hibernate>5.2.8.Final</version.hibernate>
+    <version.openjpa>2.4.2</version.openjpa>
   </properties>
 
   <dependencyManagement>
@@ -54,32 +54,32 @@
       <dependency>
         <groupId>org.apache.openjpa</groupId>
         <artifactId>openjpa</artifactId>
-        <version>${openjpa.version}</version>
+        <version>${version.openjpa}</version>
       </dependency>
       <dependency>
         <groupId>org.batoo.jpa</groupId>
         <artifactId>batoo-jpa</artifactId>
-        <version>${batoojpa.version}</version>
+        <version>${version.batoojpa}</version>
       </dependency>
       <dependency>
         <groupId>org.datanucleus</groupId>
         <artifactId>datanucleus-jpa-query</artifactId>
-        <version>${datanucleus.version}</version>
+        <version>${version.datanucleus}</version>
       </dependency>
       <dependency>
         <groupId>org.eclipse.persistence</groupId>
         <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-        <version>${eclipselink.version}</version>
+        <version>${version.eclipselink}</version>
       </dependency>
       <dependency>
         <groupId>org.eclipse.persistence</groupId>
         <artifactId>eclipselink</artifactId>
-        <version>${eclipselink.version}</version>
+        <version>${version.eclipselink}</version>
       </dependency>
       <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-jpamodelgen</artifactId>
-        <version>${hibernate.version}</version>
+        <version>${version.hibernate}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -187,7 +187,7 @@
               <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-jpamodelgen</artifactId>
-                <version>${hibernate.version}</version>
+                <version>${version.hibernate}</version>
               </dependency>
             </dependencies>
           </plugin>
@@ -252,7 +252,7 @@
               <dependency>
                 <groupId>org.apache.openjpa</groupId>
                 <artifactId>openjpa</artifactId>
-                <version>${openjpa.version}</version>
+                <version>${version.openjpa}</version>
               </dependency>
             </dependencies>
           </plugin>
@@ -301,7 +301,7 @@
               <dependency>
                 <groupId>org.eclipse.persistence</groupId>
                 <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-                <version>${eclipselink.version}</version>
+                <version>${version.eclipselink}</version>
               </dependency>
             </dependencies>
           </plugin>
@@ -350,7 +350,7 @@
               <dependency>
                 <groupId>org.datanucleus</groupId>
                 <artifactId>datanucleus-jpa-query</artifactId>
-                <version>${datanucleus.version}</version>
+                <version>${version.datanucleus}</version>
               </dependency>
             </dependencies>
           </plugin>
@@ -399,12 +399,12 @@
               <dependency>
                 <groupId>org.datanucleus</groupId>
                 <artifactId>datanucleus-jpa-query</artifactId>
-                <version>${datanucleus.version}</version>
+                <version>${version.datanucleus}</version>
               </dependency>
               <dependency>
                 <groupId>org.datanucleus</groupId>
                 <artifactId>datanucleus-core</artifactId>
-                <version>${datanucleus.version}</version>
+                <version>${version.datanucleus}</version>
               </dependency>
             </dependencies>
           </plugin>

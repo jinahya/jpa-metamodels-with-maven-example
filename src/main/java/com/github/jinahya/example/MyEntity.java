@@ -13,15 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-
 package com.github.jinahya.example;
-
 
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
 
 /**
  *
@@ -30,13 +26,8 @@ import javax.persistence.Id;
 @Entity
 public class MyEntity implements Serializable {
 
-
     private static final long serialVersionUID = 2386467385199396852L;
-
 
     @Id
     private Long id;
-
-
 }
-

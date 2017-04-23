@@ -45,7 +45,7 @@
     <version.batoojpa>2.0.1.2</version.batoojpa>
     <version.datanucleus>5.0.1</version.datanucleus>
     <version.eclipselink>2.6.4</version.eclipselink>
-    <version.hibernate>5.2.8.Final</version.hibernate>
+    <version.hibernate>5.2.10.Final</version.hibernate>
     <version.openjpa>2.4.2</version.openjpa>
   </properties>
 
@@ -111,7 +111,7 @@
         <plugin>
           <groupId>org.bsc.maven</groupId>
           <artifactId>maven-processor-plugin</artifactId>
-          <version>3.2.0</version>
+          <version>3.3.1</version>
         </plugin>
       </plugins>
     </pluginManagement>

@@ -20,8 +20,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
+ * An entity.
  *
- * @author <a href="mailto:onacit@gmail.com">Jin Kwon</a>
+ * @author Jin Kwon &lt;onacit at gmail.com&gt;
  */
 @Entity
 public class MyEntity implements Serializable {

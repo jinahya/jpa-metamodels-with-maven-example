@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.github.jinahya</groupId>
     <artifactId>jinahya-parent</artifactId>
-    <version>0.7.6</version>
+    <version>0.7.7</version>
   </parent>
 
   <groupId>com.github.jinahya</groupId>
@@ -24,10 +24,6 @@
     </license>
   </licenses>
 
-  <prerequisites>
-    <maven>3.1</maven>
-  </prerequisites>
-
   <scm>
     <connection>scm:git:git@github.com:jinahya/${project.artifactId}.git</connection>
     <developerConnection>scm:git:git@github.com:jinahya/${project.artifactId}.git</developerConnection>
@@ -43,9 +39,9 @@
     <maven.compiler.testSource>1.8</maven.compiler.testSource>
     <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
     <version.batoojpa>2.0.1.2</version.batoojpa>
-    <version.datanucleus>5.0.1</version.datanucleus>
-    <version.eclipselink>2.6.4</version.eclipselink>
-    <version.hibernate>5.2.10.Final</version.hibernate>
+    <version.datanucleus>5.0.3</version.datanucleus>
+    <version.eclipselink>2.7.0</version.eclipselink>
+    <version.hibernate>5.2.12.Final</version.hibernate>
     <version.openjpa>2.4.2</version.openjpa>
   </properties>
 
@@ -85,10 +81,22 @@
   </dependencyManagement>
   <dependencies>
     <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.2.3</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>javax</groupId>
       <artifactId>javaee-api</artifactId>
-      <version>7.0</version>
+      <version>8.0</version>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>6.13.1</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 

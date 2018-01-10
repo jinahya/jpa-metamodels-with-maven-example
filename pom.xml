@@ -40,7 +40,7 @@
     <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
     <version.batoojpa>2.0.1.2</version.batoojpa>
     <version.datanucleus>5.0.3</version.datanucleus>
-    <version.eclipselink>2.7.0</version.eclipselink>
+    <version.eclipselink>2.7.1</version.eclipselink>
     <version.hibernate>5.2.12.Final</version.hibernate>
     <version.openjpa>2.4.2</version.openjpa>
   </properties>
@@ -114,12 +114,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.6.1</version>
+          <version>3.7.0</version>
         </plugin>
         <plugin>
           <groupId>org.bsc.maven</groupId>
           <artifactId>maven-processor-plugin</artifactId>
-          <version>3.3.1</version>
+          <version>3.3.2</version>
         </plugin>
       </plugins>
     </pluginManagement>

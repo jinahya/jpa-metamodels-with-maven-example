@@ -39,9 +39,8 @@
     <maven.compiler.testSource>1.8</maven.compiler.testSource>
     <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
     <version.batoojpa>2.0.1.2</version.batoojpa>
-    <version.datanucleus>5.0.3</version.datanucleus>
+    <version.datanucleus>5.0.4</version.datanucleus>
     <version.eclipselink>2.7.1</version.eclipselink>
-    <version.hibernate>5.2.12.Final</version.hibernate>
     <version.openjpa>2.4.2</version.openjpa>
   </properties>
 
@@ -75,7 +74,7 @@
       <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-jpamodelgen</artifactId>
-        <version>${version.hibernate}</version>
+        <version>5.2.16.Final</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -95,7 +94,7 @@
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
-      <version>6.13.1</version>
+      <version>6.14.2</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

@@ -15,24 +15,18 @@
  */
 package com.github.jinahya.example;
 
-import static java.lang.invoke.MethodHandles.lookup;
-import java.lang.reflect.Field;
-import org.slf4j.Logger;
-import static org.slf4j.LoggerFactory.getLogger;
 import org.testng.annotations.Test;
 
 /**
- * A test class for {@link MyEntity}.
+ * A class for testing {@link MyEntity}.
  *
  * @author Jin Kwon &lt;jinahya_at_gmail.com&gt;
  */
 public class MyEntityTest {
 
-    private static final Logger logger = getLogger(lookup().lookupClass());
-
     // -------------------------------------------------------------------------
     @Test
     public void test() throws ReflectiveOperationException {
-        final Field field = MyEntity_.class.getField("id");
+        MyEntity_.class.getField("id");
     }
 }

@@ -45,7 +45,7 @@
     <version.batoojpa>2.0.1.2</version.batoojpa>
     <version.datanucleus>5.0.5</version.datanucleus>
     <version.eclipselink>2.7.3</version.eclipselink>
-    <version.hibernate-jpamodelgen>5.3.1.Final</version.hibernate-jpamodelgen>
+    <version.hibernate-jpamodelgen>5.3.6.Final</version.hibernate-jpamodelgen>
     <version.javax.annotation-api>1.3.2</version.javax.annotation-api>
     <version.jaxb-api>2.3.0</version.jaxb-api>
     <version.openjpa>3.0.0</version.openjpa>

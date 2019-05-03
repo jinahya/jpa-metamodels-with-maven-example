@@ -7,5 +7,3 @@ mvn -Peclipselink-dependency clean package
 mvn -Peclipselink-processor clean package
 mvn -Pdatanucleus-dependency clean package
 mvn -Pdatanucleus-processor clean package
-#mvn -Pbatoojpa1 (Active: false , Source: pom)
-#mvn -Pbatoojpa2 (Active: false , Source: pom)

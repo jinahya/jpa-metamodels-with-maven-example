@@ -4,6 +4,9 @@
 
 An example generates JPA Metamodels with Apache Maven.
 
+## Build'em all
+Try to execute `build-all-profiles.sh` for convenience.
+
 ## EclipseLink
 
 ### `eclipselink-dependency`

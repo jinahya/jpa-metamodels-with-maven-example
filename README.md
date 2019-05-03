@@ -20,21 +20,21 @@ Uses `org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor` fro
 
 ### Hibernate
 
-##### `hibernate-dependency`
+#### `hibernate-dependency`
 Uses `org.hibernate:hibernate-jpamodelgen` as an optional dependency.
 
-##### `hibernate-processor`
+#### `hibernate-processor`
 Uses `org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor` from `org.hibernate:hibernate-jpamodelgen` as an annotation processor.
 * Note that `javax.xml.bind.jaxb-api` is required.
 
 ### OpenJPA
 
-##### `openjpa-dependency`
+#### `openjpa-dependency`
 Uses `org.apache.openjpa:openjpa` as an optional dependency.
 * Note that `javax.annotation:javax:annotation-api` is required.
 * And a compier argument(`-Aopenjpa.metamodel`) must be set.
 
-##### `openjpa-processor`
+#### `openjpa-processor`
 Uses `org.apache.openjpa.persistence.meta.AnnotationProcessor6` of `org.apache.openjpa:openjpa` as an annotation processor.
 
 ### DataNucleus

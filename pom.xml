@@ -8,7 +8,6 @@
     <version>0.8.3</version>
   </parent>
 
-  <groupId>com.github.jinahya</groupId>
   <artifactId>jpa-metamodels-with-maven-example</artifactId>
   <version>0.6.1-SNAPSHOT</version>
   <packaging>jar</packaging>
@@ -24,10 +23,6 @@
     </license>
   </licenses>
 
-  <prerequisites>
-    <maven>3.1</maven>
-  </prerequisites>
-
   <scm>
     <connection>scm:git:git@github.com:jinahya/${project.artifactId}.git</connection>
     <developerConnection>scm:git:git@github.com:jinahya/${project.artifactId}.git</developerConnection>
@@ -36,13 +31,13 @@
   </scm>
 
   <properties>
-    <maven.compiler.source>1.6</maven.compiler.source>
-    <maven.compiler.target>1.6</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.testSource>1.8</maven.compiler.testSource>
     <maven.compiler.testTarget>1.8</maven.compiler.testTarget>
     <version.datanucleus>5.0.5</version.datanucleus>
     <version.eclipselink>2.7.4</version.eclipselink>
-    <version.hibernate-jpamodelgen>5.4.2.Final</version.hibernate-jpamodelgen>
+    <version.hibernate-jpamodelgen>6.0.0.Alpha2</version.hibernate-jpamodelgen>
     <version.javax.annotation-api>1.3.2</version.javax.annotation-api>
     <version.jaxb-api>2.3.1</version.jaxb-api>
     <version.openjpa>3.1.0</version.openjpa>
@@ -55,11 +50,11 @@
         <artifactId>javax.annotation-api</artifactId>
         <version>${version.javax.annotation-api}</version>
       </dependency>
-      <dependency>
-        <groupId>javax.xml.bind</groupId>
-        <artifactId>jaxb-api</artifactId>
-        <version>${version.jaxb-api}</version>
-      </dependency>
+<!--      <dependency>-->
+<!--        <groupId>javax.xml.bind</groupId>-->
+<!--        <artifactId>jaxb-api</artifactId>-->
+<!--        <version>${version.jaxb-api}</version>-->
+<!--      </dependency>-->
       <dependency>
         <groupId>org.apache.openjpa</groupId>
         <artifactId>openjpa</artifactId>
@@ -129,7 +124,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
-        <version>1.4.1</version>
+        <version>3.0.0-M1</version>
         <executions>
           <execution>
             <id>enforce-metamodel-generated</id>
@@ -211,11 +206,11 @@
         <environment.id>hibernate-dependency</environment.id>
       </properties>
       <dependencies>
-        <dependency>
-          <groupId>javax.xml.bind</groupId>
-          <artifactId>jaxb-api</artifactId>
-          <scope>provided</scope>
-        </dependency>        
+<!--        <dependency>-->
+<!--          <groupId>javax.xml.bind</groupId>-->
+<!--          <artifactId>jaxb-api</artifactId>-->
+<!--          <scope>provided</scope>-->
+<!--        </dependency>        -->
         <dependency>
           <groupId>org.hibernate</groupId>
           <artifactId>hibernate-jpamodelgen</artifactId>
@@ -248,11 +243,11 @@
               </execution>
             </executions>
             <dependencies>
-              <dependency>
-                <groupId>javax.xml.bind</groupId>
-                <artifactId>jaxb-api</artifactId>
-                <version>${version.jaxb-api}</version>
-              </dependency>              
+<!--              <dependency>-->
+<!--                <groupId>javax.xml.bind</groupId>-->
+<!--                <artifactId>jaxb-api</artifactId>-->
+<!--                <version>${version.jaxb-api}</version>-->
+<!--              </dependency>              -->
               <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-jpamodelgen</artifactId>

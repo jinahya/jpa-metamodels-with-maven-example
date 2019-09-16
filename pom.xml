@@ -269,6 +269,7 @@
                 </goals>
                 <phase>generate-sources</phase>
                 <configuration>
+                  <compilerArguments>-AaddGeneratedAnnotation=false</compilerArguments>
                   <processors>
                     <processor>org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor</processor>
                   </processors>

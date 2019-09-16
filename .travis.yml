@@ -1,8 +1,15 @@
 language: java
 jdk:
-  - oraclejdk8
+  - openjdk8
+  - openjdk11
 script:
-  - sudo apt-get update && sudo apt-get -y install oracle-java8-installer
-  - java -version
-  - mvn clean package
+#  - sudo apt-get update && sudo apt-get -y install oracle-java8-installer
+  - mvn -Phibernate-dependency clean package
+  - mvn -Phibernate-processor clean package
+  - mvn -Peclipselink-dependency clean package
+  - mvn -Peclipselink-processor clean package
+  - mvn -Popenjpa-dependency clean package
+  - mvn -Popenjpa-processor clean package
+  - mvn -Pdatanucleus-dependency clean package
+  - mvn -Pdatanucleus-processor clean package
 

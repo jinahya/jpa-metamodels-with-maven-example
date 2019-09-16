@@ -1,6 +1,6 @@
 # jpa-metamodels-with-maven-example
 
-[![Build Status](https://travis-ci.org/jinahya/jpa-metamodels-with-maven-example.svg?branch=develop)](https://travis-ci.org/jinahya/jpa-metamodels-with-maven-example)
+[![CircleCI](https://circleci.com/gh/jinahya/jpa-metamodels-with-maven-example/tree/develop.svg?style=svg)](https://circleci.com/gh/jinahya/jpa-metamodels-with-maven-example/tree/develop)
 
 An example generates JPA Metamodels with Apache Maven.
 

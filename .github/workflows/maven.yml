@@ -1,6 +1,9 @@
-name: Java CI
+name: EclipseLink as a dependency
 
-on: [push]
+on:
+  push:
+    branches:
+    - develop
 
 jobs:
   build:
@@ -14,4 +17,4 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn package --file pom.xml
+      run: mvn -Peclipselink-dependency package --file pom.xml

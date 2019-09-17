@@ -71,7 +71,7 @@
         <version>${version.eclipselink}</version>
       </dependency>
       <dependency>
-        <groupId>org.hibernate</groupId>
+        <groupId>org.hibernate.orm</groupId>
         <artifactId>hibernate-jpamodelgen</artifactId>
         <version>${version.hibernate-jpamodelgen}</version>
       </dependency>
@@ -195,8 +195,7 @@
         <dependency>
           <groupId>org.eclipse.persistence</groupId>
           <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-          <scope>compile</scope>
-          <optional>true</optional>
+          <scope>provided</scope>
         </dependency>
       </dependencies>
     </profile>
@@ -244,16 +243,10 @@
         <environment.id>hibernate-dependency</environment.id>
       </properties>
       <dependencies>
-        <!--        <dependency>-->
-        <!--          <groupId>javax.xml.bind</groupId>-->
-        <!--          <artifactId>jaxb-api</artifactId>-->
-        <!--          <scope>provided</scope>-->
-        <!--        </dependency>        -->
         <dependency>
-          <groupId>org.hibernate</groupId>
+          <groupId>org.hibernate.orm</groupId>
           <artifactId>hibernate-jpamodelgen</artifactId>
-          <scope>compile</scope>
-          <optional>true</optional>
+          <scope>provided</scope>
         </dependency>
       </dependencies>
     </profile>
@@ -274,7 +267,7 @@
                 </goals>
                 <phase>generate-sources</phase>
                 <configuration>
-                  <compilerArguments>-AaddGeneratedAnnotation=false</compilerArguments>
+                  <compilerArguments>-AaddGeneratedAnnotation=false</compilerArguments> <!-- suppress java.annotation -->
                   <processors>
                     <processor>org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor</processor>
                   </processors>
@@ -282,13 +275,8 @@
               </execution>
             </executions>
             <dependencies>
-              <!--              <dependency>-->
-              <!--                <groupId>javax.xml.bind</groupId>-->
-              <!--                <artifactId>jaxb-api</artifactId>-->
-              <!--                <version>${version.jaxb-api}</version>-->
-              <!--              </dependency>              -->
               <dependency>
-                <groupId>org.hibernate</groupId>
+                <groupId>org.hibernate.orm</groupId>
                 <artifactId>hibernate-jpamodelgen</artifactId>
                 <version>${version.hibernate-jpamodelgen}</version>
               </dependency>
@@ -303,16 +291,10 @@
         <environment.id>openjpa-dependency</environment.id>
       </properties>
       <dependencies>
-<!--        <dependency>-->
-<!--          <groupId>javax.annotation</groupId>-->
-<!--          <artifactId>javax.annotation-api</artifactId>-->
-<!--          <scope>provided</scope>-->
-<!--        </dependency>-->
         <dependency>
           <groupId>org.apache.openjpa</groupId>
           <artifactId>openjpa</artifactId>
-          <scope>compile</scope>
-          <optional>true</optional>
+          <scope>provided</scope>
         </dependency>
       </dependencies>
       <build>
@@ -376,8 +358,7 @@
         <dependency>
           <groupId>org.datanucleus</groupId>
           <artifactId>datanucleus-jpa-query</artifactId>
-          <scope>compile</scope>
-          <optional>true</optional>
+          <scope>provided</scope>
         </dependency>
       </dependencies>
     </profile>
